@@ -9,21 +9,31 @@ namespace GuessingGame
     {
         static void Main(string[] args)
         {
-            int guess;
-            int guess2;
-            String Input;
+            string input;
+            int high = 100, low = 0, guess; 
             while (true)
             {
-                guess = 50;
-                guess2 = 75;
-                Console.WriteLine("Is your guess {0}? h,l,e", guess, guess2);
-                Input = Console.ReadLine();
-                if (Input == "h");
+                guess = (high + low) / 2;
+                Console.WriteLine("Is your guess higher, lower, or equal to {0}?", guess);
+                input = Console.ReadLine();
+                if (input == "h")
                 {
+                    low = guess + 1;
+                } 
+                else if (input == "l")
+                {
+                    high = guess - 1;
+                }
+                else if (input == "e")
+                {
+                    break;
+                }
+           
+         
 
 
                 }
             }
         }
     }
-}
+
